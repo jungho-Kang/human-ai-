@@ -44,6 +44,9 @@ def predict_image(image_bytes):
 # =========================
 # API 엔드포인트
 # =========================
+# pip install python-multipart
+# multipart/form-data (파일 업로드 방식)
+# file: UploadFile = File(...)
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
 
